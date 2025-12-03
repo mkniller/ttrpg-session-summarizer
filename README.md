@@ -1,4 +1,5 @@
 # 📜 TTRPG Session Summarizer
+
 *A fully automated ShadowDark-style session recap generator using GPT-4.1*
 
 This project converts raw TTRPG session transcripts into:
@@ -17,7 +18,9 @@ Everything is done through a multi-stage FastAPI pipeline backed by GPT-4.1.
 ## 🚀 Features
 
 ### ✔ Canon Extraction  
+
 Builds canonical lists of:
+
 - Player characters (with pronouns)
 - NPCs  
 - Locations  
@@ -25,20 +28,25 @@ Builds canonical lists of:
 - Creatures  
 
 ### ✔ Timeline Extraction  
+
 Strict chronological ordering of events from the transcript — zero hallucinations.
 
 ### ✔ Complete Recap Generation  
+
 - **GM Recap** → objective and structured  
 - **Player Recap** → atmospheric, gritty, in-world narrative  
 Both guaranteed to reference only transcript events.
 
 ### ✔ Automatic Player-Name → Character-Name Replacement  
+
 Using `characters.json`.
 
 ### ✔ Location Normalization  
+
 Fixes misspellings like “elkesh” → “Alkesh”.
 
 ### ✔ Multi-Stage Pipeline  
+
 1. Normalize transcript  
 2. Extract canon  
 3. Extract timeline  
@@ -97,7 +105,7 @@ app/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/ttrpg-summarizer.git
+git clone https://github.com/mkniller/ttrpg-session-summarizer.git
 cd ttrpg-summarizer
 ```
 
@@ -155,7 +163,7 @@ uvicorn app.main:app --reload
 
 You should see:
 
-```
+```shell
 Uvicorn running on http://127.0.0.1:8000
 ```
 
@@ -163,16 +171,16 @@ Uvicorn running on http://127.0.0.1:8000
 
 ## 📤 Uploading a Transcript
 
-### Using curl:
+### Using curl
 
 ```bash
 curl -X POST "http://127.0.0.1:8000/upload" \
   -F "file=@session_transcript.txt"
 ```
 
-### Or use the Swagger UI:
+### Or use the Swagger UI
 
-```
+```plaintext
 http://127.0.0.1:8000/docs
 ```
 
@@ -182,7 +190,7 @@ http://127.0.0.1:8000/docs
 
 All generated content is stored in:
 
-```
+```plaintext
 storage/output/{session_filename}/
 ```
 
@@ -203,7 +211,7 @@ This includes:
 
 Located at:
 
-```
+```plaintext
 app/config/characters.json
 ```
 
@@ -258,11 +266,14 @@ This file controls:
 killall uvicorn
 ```
 
-### Lirel appearing when she wasn’t at the session  
+### Lirel appearing when she wasn’t at the session 
+
 Make sure her **aliases** don’t appear anywhere in the transcript.
 
 ### Pronouns incorrect  
+
 Check:
+
 - `characters.json`
 - `canon_extract.txt` prompt placement
 - That alias normalization isn’t confusing characters
