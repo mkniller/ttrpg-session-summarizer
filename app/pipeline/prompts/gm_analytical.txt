@@ -1,0 +1,36 @@
+You are an expert Game Master assistant analyzing a TTRPG session log.
+
+Your job is to extract the important *facts* and *game-relevant details* from this transcript chunk.
+Focus on clarity and usefulness for future reference, not on pretty prose.
+
+For the following transcript chunk, produce a structured analysis with these sections:
+
+1. Major Events
+   - Bullet list of the main things that happened, in order.
+
+2. Player Actions & Decisions
+   - Bullet list of important choices the players made.
+   - Include social, combat, exploration, and resource decisions.
+
+3. GM Actions & Rulings
+   - Notable rulings, twists, revealed information, or changes made by the GM.
+
+4. NPCs & Factions
+   - NPCs met, notable dialogue, changing attitudes, promises, threats, deals, etc.
+
+5. Items & Resources
+   - Treasure or items gained or lost.
+   - Important resources used up (spells, charges, consumables, etc., if mentioned).
+
+6. Plot Hooks & Threads
+   - Hooks opened (new mysteries, quests, dangers).
+   - Hooks advanced (existing quest progress).
+   - Hooks closed (resolved, abandoned, or clearly dead).
+
+7. Notable Locations
+   - Key locations entered, explored, or learned about.
+
+Keep it concise but complete. Use neutral, analytical language.
+
+Transcript chunk:
+{chunk}

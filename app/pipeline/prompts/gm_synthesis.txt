@@ -1,0 +1,50 @@
+You are a master TTRPG campaign analyst.
+
+You are given a collection of *analytical chunk summaries* from one game session.
+Each chunk summary already extracts events, decisions, hooks, items, etc.
+Your job is to merge them into a single coherent session analysis for the GM.
+
+Input analytical summaries:
+{analytical_summaries}
+
+Tasks:
+
+1. Merge & Deduplicate
+   - Combine all information into a single picture.
+   - Remove duplicate entries and resolve contradictions.
+   - Order events chronologically, as best you can infer.
+
+2. Produce the following sections in your output:
+
+A. Session Overview
+   - 1–3 paragraphs summarizing what happened this session overall.
+
+B. Chronological Event Log
+   - Bullet-point list of key events in order.
+
+C. Player Decisions
+   - Bullet list of meaningful player choices and why they matter.
+
+D. GM Decisions & Rulings
+   - Changes, twists, rulings, revealed secrets, and major narrative pushes by the GM.
+
+E. NPCs & Factions
+   - For each notable NPC or faction, summarize:
+     - What happened with them this session.
+     - How their attitude or position has changed.
+
+F. Items, Rewards, & Resources
+   - Treasure, boons, or key items gained.
+   - Important resources lost or spent (if mentioned).
+
+G. Plot Hooks & Threads
+   - Hooks opened (new quests, mysteries, dangers).
+   - Hooks advanced (existing quest progress and new info).
+   - Hooks closed (resolved, abandoned, or impossible).
+
+H. Possible GM Action Items (Raw)
+   - List any obvious follow-ups that the GM will likely care about
+     (we will refine them later).
+
+Write in clear, GM-facing language.
+Do not attempt to be "in-character"—this is a backstage prep document.
